@@ -1,2 +1,2 @@
 # SerwisProjekt
-Projekt Serwisu ogłoszeniowego
+Projekt Serwisu Ogłoszeniowego
