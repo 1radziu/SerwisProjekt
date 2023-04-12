@@ -10,7 +10,7 @@
 
     $conn = mysqli_connect("localhost","root","","xdxd");
 
-    $sql = "INSERT INTO samochody(marka,model,rocznik,moc,przebieg,cena,rodzajpaliwa) values ('$marka','$model',$rocznik,$moc,$przebieg,$cena,$rodzajpaliwa)";
+    $sql = "INSERT INTO samochody(marka,model,rocznik,moc,przebieg,cena,paliwo) values ('$marka','$model',$rocznik,$moc,$przebieg,$cena,$rodzajpaliwa)";
 
     mysqli_query($conn,$sql);
     ?>
