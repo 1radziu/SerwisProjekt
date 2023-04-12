@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 05 Kwi 2023, 13:48
+-- Czas generowania: 12 Kwi 2023, 13:42
 -- Wersja serwera: 10.4.27-MariaDB
 -- Wersja PHP: 8.1.12
 
@@ -18,8 +18,25 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Baza danych: ` baza`
+-- Baza danych: `xdxd`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `samochody`
+--
+
+CREATE TABLE `samochody` (
+  `id` int(11) NOT NULL,
+  `model` varchar(32) NOT NULL,
+  `marka` varchar(32) NOT NULL,
+  `rocznik` year(4) NOT NULL,
+  `przebieg` int(7) NOT NULL,
+  `cena` int(7) NOT NULL,
+  `moc` int(4) NOT NULL,
+  `Rodzaj paliwa` varchar(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -37,8 +54,22 @@ CREATE TABLE `uzytkownicy` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
+-- Zrzut danych tabeli `uzytkownicy`
+--
+
+INSERT INTO `uzytkownicy` (`id`, `email`, `password`, `imie`, `nazwisko`, `telefon`) VALUES
+(1, 'wp@wp.pl', '123123', 'Adam', 'Abacki', 123123123),
+(2, 'wp@wp.pl', '123123', 'Adam', 'Abacki', 123123123);
+
+--
 -- Indeksy dla zrzutów tabel
 --
+
+--
+-- Indeksy dla tabeli `samochody`
+--
+ALTER TABLE `samochody`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indeksy dla tabeli `uzytkownicy`
@@ -51,10 +82,16 @@ ALTER TABLE `uzytkownicy`
 --
 
 --
+-- AUTO_INCREMENT dla tabeli `samochody`
+--
+ALTER TABLE `samochody`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT dla tabeli `uzytkownicy`
 --
 ALTER TABLE `uzytkownicy`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
