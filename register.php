@@ -4,7 +4,7 @@
     $imie = $_POST["imie"];
     $nazwisko = $_POST["nazwisko"];
     $telefon = $_POST["telefon"];
-
+    $haslo2 = $_POST["haslo2"];
     $conn = mysqli_connect("localhost","root","","xdxd");
 
     $sql = "INSERT INTO uzytkownicy(email,password,imie,nazwisko,telefon) values ('$email','$haslo','$imie','$nazwisko',$telefon)";
