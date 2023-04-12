@@ -10,4 +10,20 @@
     $sql = "INSERT INTO uzytkownicy(email,password,imie,nazwisko,telefon) values ('$email','$haslo','$imie','$nazwisko',$telefon)";
 
     mysqli_query($conn,$sql);
+    // if (strpos($email, '@') != false)
+    // {
+    //     echo 'Adres jest poprawny';
+    // }
+    // else 
+    // {
+    //     echo 'Adres jest niepoprawny';
+    // }
+    // if ($haslo == $haslo2)
+    // {
+    //     echo 'Hasła są takie same';
+    // }
+    // else
+    // {
+    //     echo 'Hasła nie są takie same';
+    // }
     ?>
